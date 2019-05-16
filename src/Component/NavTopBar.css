@@ -1,0 +1,14 @@
+.container-nav-top-bar {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.element-nav-top-bar {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid red;
+   cursor: pointer;
+   text-decoration: none;
+   color: black;
+}
