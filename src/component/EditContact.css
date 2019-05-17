@@ -1,0 +1,15 @@
+.button-edit-contact {
+   color: rgb(51, 51, 51);
+   padding-top: 6px;
+   padding-bottom: 6px;
+   cursor: pointer;
+   margin-left: 16px;
+   margin-right: 16px;
+   box-sizing: content-box;
+}
+
+
+.button-edit-contact:hover {
+   background-color: rgb(38, 132, 255);
+   color: white;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 
 // Component
+import useGetContact from './GetContact';
+import DropDownMenu from './DropDownMenu';
 
 // Style
 import './Home.css'
@@ -13,27 +15,20 @@ const Icon = (
 
 export default function Home() {
    const [userInput, setUserInput] = React.useState("");
-   const inputValue = React.useRef(null);
 
-   const handleRefValue = () => {
-      if (!inputValue) return;
-      const { value } = inputValue.current;
+   const handleRefValue = (event) => setUserInput(event.target.value);
 
-      setUserInput(value);
-   }
-
-   const resetInputValue = () => {
-      if (inputValue)
-         inputValue.current.value = ""
-      setUserInput("");
-   };
+   const resetInputValue = () => setUserInput("");
 
    return (
-      <div className="container-input-search-bar">
-         <input placeholder="Search..." type="text" ref={inputValue} onChange={handleRefValue} className="input-search-bar"/>
-         <div className="delete-value-search-bar" onClick={resetInputValue}>
-            {Icon}
+      <>
+         <div className="container-input-search-bar">
+            <input className="input-search-bar" placeholder="Search..." type="text" value={userInput} onChange={handleRefValue} />
+            <div className="delete-value-search-bar" onClick={resetInputValue}>
+               {Icon}
+            </div>
          </div>
-      </div>
+         <DropDownMenu list={useGetContact(userInput)}/>
+      </>
    )
 }

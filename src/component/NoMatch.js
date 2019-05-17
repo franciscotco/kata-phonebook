@@ -6,7 +6,9 @@ export default function NoMatch() {
       <div>
          NoMatch
          <br />
-         <Link to="/">Back to Home</Link>
+         <Link to="/">
+            Back to Home
+         </Link>
       </div>
    )
 }

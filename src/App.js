@@ -1,16 +1,20 @@
 import React from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
-// Component
-import Home from './Component/Home';
-import AddContact from './Component/AddContact';
-import EditContact from './Component/EditContact';
-import NoMatch from './Component/NoMatch';
-import NavTopBar from './Component/NavTopBar';
+// constant
+import { ROOT, ADD_CONTACT, EDIT_CONTACT_LINK } from './constant';
 
+// Component
+import Home from './component/Home';
+import AddContact from './component/AddContact';
+import EditContact from './component/EditContact';
+import NoMatch from './component/NoMatch';
+import NavTopBar from './component/NavTopBar';
+
+// Style
 import './App.css';
 
-class App extends React.Component {
+class App extends React.PureComponent {
   render() {
     return (
       <div className="layout-app">
@@ -18,9 +22,9 @@ class App extends React.Component {
           <NavTopBar />
           <BrowserRouter>
             <Switch>
-              <Route exact path="/" component={Home}/>
-              <Route path="/addcontact" component={AddContact}/>
-              <Route path="/editcontact" component={EditContact}/>
+              <Route exact path={ROOT} component={Home}/>
+              <Route path={ADD_CONTACT} component={AddContact}/>
+              <Route path={EDIT_CONTACT_LINK} component={EditContact}/>
               <Route component={NoMatch}/>
             </Switch>
           </BrowserRouter>
@@ -31,55 +35,3 @@ class App extends React.Component {
 }
 
 export default App;
-
- // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     name: '',
-  //     greeting: ''
-  //   };
-  //   this.handleChange = this.handleChange.bind(this);
-  //   this.handleSubmit = this.handleSubmit.bind(this);
-  // }
-
-  // handleChange(event) {
-  //   this.setState({ name: event.target.value });
-  // }
-
-  // handleSubmit(event) {
-  //   event.preventDefault();
-  //   fetch(`/api/greeting?name=${encodeURIComponent(this.state.name)}`)
-  //     .then(response => response.json())
-  //     .then(state => this.setState(state));
-  // }
-  // render() {
-  //   return (
-  //     <div className="App">
-  //       <header className="App-header">
-  //         <img src={logo} className="App-logo" alt="logo" />
-  //         <p>
-  //           Edit <code>src/App.js</code> and save to reload.
-  //         </p>
-  //         <form onSubmit={this.handleSubmit}>
-  //           <label htmlFor="name">Enter your name: </label>
-  //           <input
-  //             id="name"
-  //             type="text"
-  //             value={this.state.name}
-  //             onChange={this.handleChange}
-  //           />
-  //           <button type="submit">Submit</button>
-  //         </form>
-  //         <p>{this.state.greeting}</p>
-  //         <a
-  //           className="App-link"
-  //           href="https://reactjs.org"
-  //           target="_blank"
-  //           rel="noopener noreferrer"
-  //         >
-  //           Learn React
-  //         </a>
-  //       </header>
-  //     </div>
-  //   );
-  // }

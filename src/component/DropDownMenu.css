@@ -1,0 +1,83 @@
+.container-list-drop-down-menu {
+   position: relative;
+   max-height: 400px;
+   border: 2px solid rgb(217, 217, 217);
+   overflow: auto;
+   padding-top: 4px;
+   padding-bottom: 4px;
+   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+   margin-top: 4px;
+   border-radius: 6px;
+}
+
+.header-container-element-drop-down-menu {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   cursor: default;
+   padding-left: 6px;
+
+}
+
+.container-element-drop-down-menu {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding-top: 4px;
+   padding-bottom: 4px;
+   margin-top: 4px;
+   padding-left: 6px;
+}
+
+.header-first-name-element-drop-down-menu {
+   text-align: left;
+   flex: 2;
+   font-weight: 600;
+}
+
+.first-name-element-drop-down-menu {
+   text-align: left;
+   flex: 2;
+
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   cursor: pointer;
+}
+
+.header-last-name-element-drop-down-menu {
+   text-align: left;
+   flex: 2;
+   font-weight: 600;
+
+}
+
+.last-name-element-drop-down-menu {
+   text-align: left;
+   flex: 2;
+
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   cursor: pointer;
+}
+
+.header-phone-number-element-drop-down-menu {
+   text-align: left;
+   flex: 3;
+   font-weight: 600;
+}
+
+.phone-number-element-drop-down-menu {
+   text-align: left;
+   flex: 3;
+
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   cursor: pointer;
+}
+
+.container-element-drop-down-menu:hover {
+   background-color: rgb(222, 235, 255);
+}

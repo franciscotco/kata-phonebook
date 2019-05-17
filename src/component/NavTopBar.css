@@ -7,8 +7,13 @@
 .element-nav-top-bar {
    width: 100%;
    padding: 10px;
-   border: 1px solid red;
+   border: 1px solid rgb(38, 132, 255);
    cursor: pointer;
    text-decoration: none;
-   color: black;
+   color: rgb(37, 56, 88);
+}
+
+.element-nav-top-bar:hover {
+   color: white;
+   background-color: rgb(38, 132, 255);
 }
