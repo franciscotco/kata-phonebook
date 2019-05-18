@@ -1,7 +1,5 @@
 export function checkName(text) {
-   console.log("FALSE")
    if (text === "") return false;
-   console.log("TRUE");
    return true;
 }
 

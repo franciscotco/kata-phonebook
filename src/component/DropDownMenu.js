@@ -17,8 +17,6 @@ function DropDownMenu(props) {
       history.push(`${EDIT_CONTACT}/${firstName}/${lastName}/${phoneNumber}/${id}`);
    }
 
-   console.log("LIST :", list);
-
    if (!list || !Array.isArray(list) || list.length < 1) return null;
 
    return (

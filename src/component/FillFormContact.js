@@ -34,14 +34,10 @@ function FillFormContact({firstName = "", lastName = "", phoneNumber = "", link,
       const { value } = input.current;
    
       input.current.style.borderColor = "rgb(51, 51, 51)";
-      console.log("CALLBACK")
       if (callback(value))
          return true;
-      console.log("ERROR :", errorMessages);
-      console.log("Message :", message);
       if (message === WRONG_FIRSTNAME || message === WRONG_LASTNAME)
          setErrorMessages([...errorMessages, message]);
-      console.log("ERROR :", errorMessages);
       setColorInputs([input]);
       return false;
    }
